@@ -6,19 +6,20 @@
 
 rice=$(expr 1)
 crispies=$(expr 100)
-until [$rice -gt $crispies ]; do
+until [ $rice -gt $crispies ]; do
 if (( $rice % 3 != 0 )) && (( $rice % 5 != 0 ))
 then
   echo $rice
-  if (( $rice % 3 == 0 ))
+fi
+if (( $rice % 3 == 0 ))
+  then
+  if (( $rice % 5 == 0 ))
     then
-    if (( $rice % 5 == 0 ))
-      then
       echo "CracklePop"
-      else
+    else
       echo "Crackle"
-    fi
   fi
+fi
 if (( $rice % 5 == 0 ))
   then
     rice=$(expr $rice + 1)

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Sucuri question 8: http://labs.sucuri.net/?answerplease
 # site1.com clean clean
 # site2.com blacklisted clean
 # site3.com blacklisted malwarefound

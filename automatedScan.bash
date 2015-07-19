@@ -48,7 +48,7 @@ then
                 malwareSites=$(expr $malwareSites + 1)
         fi
 fi
-# Endingn While loop, feeding input for it to read 'sitelistscan.txt'
+# Ending While loop, feeding input for it to read 'sitelistscan.txt'
 done < sitelistscan.txt 
 echo "Number of Clean Sites: "$cleanSites
 echo "Number of Blacklisted Sites: "$blackSites

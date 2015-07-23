@@ -26,7 +26,7 @@ then
         # if B and C are "clean", then increment the amount of cleanSites by 1
         if [ $bVar = "clean" ] && [ $cVar = "clean" ]
         then
-                echo $aVar" is a clean site!"
+                echo "No issues found."
                 cleanSites=$(expr $cleanSites + 1)
         fi
         # if B or C are "blacklisted" or "malwarefound" then increment the amount of attSites by 1
@@ -47,6 +47,7 @@ then
                 echo $aVar" has malware found!"
                 malwareSites=$(expr $malwareSites + 1)
         fi
+        
 fi
 # Ending While loop, feeding input for it to read 'sitelistscan.txt'
 done < sitelistscan.txt 
